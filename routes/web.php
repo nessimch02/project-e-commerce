@@ -81,12 +81,9 @@ Route::post('/sign-in', [AuthController::class, 'login']);
 Route::get('/registerform', [AuthController::class, 'showRegister'])->name('registerform');
 Route::post('/registerform', [AuthController::class, 'register']);
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.panel');
-    Route::get('/admin/add-product', [ProductController::class, 'create'])->name('addproducts');
-    Route::get('/admin/manage-products', [ProductController::class, 'manage'])->name('manage-products');
-    Route::get('/admin/manage-users', [UserController::class, 'manage'])->name('manage-users');
-});
+
+
+
 
 
 

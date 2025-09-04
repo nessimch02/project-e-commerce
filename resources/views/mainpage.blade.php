@@ -234,7 +234,7 @@
       <a href="#">Options</a>
       <a href="#">Contacts</a>
       <a href="display-resource.htm">Sign in</a>
-    </div>
+    </div>-->
 
 
 @extends('layouts.app')

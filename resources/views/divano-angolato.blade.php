@@ -174,7 +174,7 @@
                 </tr>
             </table>
 
-            <button class="add-to-cart" onclick="location.href='{{ route('cart-divano')}}'">Add to Cart 🛒</button>
+            <button class="add-to-cart" onclick="location.href='{{ route('cart-divano-angolato')}}'">Add to Cart 🛒</button>
         </div>
     </div>
 

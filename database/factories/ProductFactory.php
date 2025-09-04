@@ -22,6 +22,7 @@ class ProductFactory extends Factory
             'Availability' => $this->faker->randomElement(['in stock', 'out of stock']),
             'Shipping' => $this->faker->randomElement(['free delivery', 'paid delivery']),
             'image' => 'pnj/example.jpg',
+            'ALT' => $this->faker->sentence(3),
         ];
     }
 }

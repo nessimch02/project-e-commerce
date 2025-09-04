@@ -102,7 +102,7 @@
     </style>
 </head>-->
 
-<body>
+
 
     <!--<div class="navbar">
         <a href="mainpage.htm">Home</a>
@@ -111,25 +111,37 @@
         <a href="sign-in.htm">Sign in</a>
     </div>-->
 
-       @extends('layouts.app')
-    @section('title','cart-divano')
-    @section('content')
+      @extends('layouts.app')
 
-    <div class="cart-container">
-        <h1>Your Shopping Cart</h1>
+@section('title','cart-divano')
 
-        <div class="cart-item">
-             <img src={{asset ("pnj/divano.jpg")}} alt="Fabric Armchair">
-            <div class="cart-details">
-                <h2>Fabric Armchair</h2>
-                <p>Price: €249.99</p>
-                <p>Quantity: 1</p>
-            </div>
+@section('content')
+
+<div class="container my-5 cart-container">
+    <h1 class="mb-4">Your Shopping Cart</h1>
+
+    <!-- Cart Item -->
+    <div class="cart-item row align-items-center mb-4 p-3 border rounded">
+        <!-- Immagine prodotto -->
+        <div class="col-md-4 text-center">
+            <img src="{{ asset('pnj/divano.jpg') }}" alt="Sofa" class="img-fluid product-image">
         </div>
-
-        <button class="checkout-btn">Proceed to Checkout</button>
+        <!-- Dettagli prodotto -->
+        <div class="col-md-8 cart-details">
+            <h2>Fabric Armchair</h2>
+            <p>Price: €299.99</p>
+            <p>Quantity: 1</p>
+        </div>
     </div>
-    @endsection
+
+    <!-- Pulsante Checkout -->
+    <div class="text-end">
+        <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+    </div>
+</div>
+
+@endsection
+
 
    <!-- <footer class="footer">
         <div class="footer-links">

@@ -65,38 +65,50 @@
 
 
 @extends('layouts.app')
-    @section('title','add-product')
-    @section('content')
+@section('title','add-product')
+@section('content')
 
+<div class="container my-5">
+    <h1 class="mb-4 text-center">Add New Product</h1>
 
-    <h1>Add New Product</h1>
+    <form onsubmit="event.preventDefault(); alert('Product added!');" class="mx-auto" style="max-width:600px;">
+        <div class="mb-3">
+            <label for="name" class="form-label">Product Name</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
 
-  <form onsubmit="event.preventDefault(); alert('Product added!');">
-    <label for="name">Product Name</label>
-    <input type="text" id="name" name="name" required />
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" name="description" rows="4" class="form-control" required></textarea>
+        </div>
 
-    <label for="description">Description</label>
-    <textarea id="description" name="description" rows="4" required></textarea>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price (€)</label>
+            <input type="number" id="price" name="price" min="0" step="0.01" class="form-control" required>
+        </div>
 
-    <label for="price">Price (€)</label>
-    <input type="number" id="price" name="price" min="0" step="0.01" required />
+        <div class="mb-3">
+            <label for="dimensions" class="form-label">Dimensions (L x W x H in cm)</label>
+            <input type="text" id="dimensions" name="dimensions" placeholder="e.g. 100 x 85 x 75" class="form-control" required>
+        </div>
 
-    <label for="dimensions">Dimensions (L x W x H in cm)</label>
-    <input type="text" id="dimensions" name="dimensions" placeholder="e.g. 100 x 85 x 75" required />
+        <div class="mb-3">
+            <label for="availability" class="form-label">Availability</label>
+            <select id="availability" name="availability" class="form-select" required>
+                <option value="in-stock">In Stock</option>
+                <option value="out-of-stock">Out of Stock</option>
+                <option value="pre-order">Pre-Order</option>
+            </select>
+        </div>
 
-    <label for="availability">Availability</label>
-    <select id="availability" name="availability" required>
-      <option value="in-stock">In Stock</option>
-      <option value="out-of-stock">Out of Stock</option>
-      <option value="pre-order">Pre-Order</option>
-    </select>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Add Product</button>
+        </div>
+    </form>
 
-    <button type="submit">Add Product</button>
-  </form>
+    <div class="back-link mt-4 text-center">
+        <a href="{{ route('adminpanel') }}">← Back to Admin Panel</a>
+    </div>
+</div>
 
-  <div class="back-link">
-    <a href="{{route('adminpanel')}}">← Back to Admin Panel</a>
-  </div>
 @endsection
-</body>
-</html>
