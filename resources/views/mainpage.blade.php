@@ -241,11 +241,11 @@
     @section('title', 'mainpage')
     @section('content')
 
-            <form class="search-bar" onsubmit="event.preventDefault(); alert('you searched: ' + this.search.value);">
+            <!--<form class="search-bar" onsubmit="event.preventDefault(); alert('you searched: ' + this.search.value);">
               <input type="text" name="search" placeholder="Search..." />
               <button type="submit">🔍</button>
             </form>
-          </div>
+          </div>-->
 
           <!-- Search section
         <div class="search-section" id="search-section">
